@@ -30,3 +30,7 @@ show_message_button.click()
 output_message = chrome_browser.find_element_by_id('display')
 
 assert 'I am extra cool' in output_message.text
+
+chrome_browser.close()  # closes current chrome browser
+chrome_browser.close()  # call twice as sometimes it doesn't work on the first call
+chrome_browser.quit()  # quits all chrome browser sessions, use this one!
